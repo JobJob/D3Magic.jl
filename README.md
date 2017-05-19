@@ -8,7 +8,7 @@ IJulia/Jupyter notebooks
 Not registered (yet) so:
 `Pkg.clone("https://github.com/JobJob/D3Magic.jl.git")`
 
-Also if you add this to you custom.js - mine is in `~/.jupyter/custom/custom.js` you can get proper html highlighting:
+Also if you add this to your custom.js - mine is in `~/.jupyter/custom/custom.js` you can get proper html highlighting:
 ```
 require(["notebook/js/codecell"], function(codecell) {
     codecell.CodeCell.options_default.highlight_modes["text/html"] = {"reg":[/^d3/]}

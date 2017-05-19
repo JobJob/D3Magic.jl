@@ -16,20 +16,12 @@ function d3string(userd3code)
     """
     <g id="d3-cell-$id">
         <script>
-            requirejs.config({
-                paths: {
-                    d3: "//cdnjs.cloudflare.com/ajax/libs/d3/$d3version/d3"
-                }
-            });
-            require(['d3'], function(d3) {
-                window.d3 = d3;
-                d3.select$id = function(selection) {
-                    return d3.select("#d3-cell-$id").select(selection);
-                }
-                d3.selectAll$id = function(selection) {
-                    return d3.select("#d3-cell-$id").selectAll(selection);
-                }
-            });
+            d3.select$id = function(selection) {
+                return d3.select("#d3-cell-$id").select(selection);
+            }
+            d3.selectAll$id = function(selection) {
+                return d3.select("#d3-cell-$id").selectAll(selection);
+            }
         </script>
         $userd3code
     </g>
@@ -40,4 +32,17 @@ macro d3_str(s)
     display("text/html", d3string(s))
 end
 
+function __init__()
+    display("text/html","""<script>
+        requirejs.config({
+            paths: {
+                d3: "//cdnjs.cloudflare.com/ajax/libs/d3/$d3version/d3"
+            }
+        });
+        require(['d3'], function(d3) {
+            window.d3 = d3;
+        })
+    </script>""")
 end
+
+end #module
