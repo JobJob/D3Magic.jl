@@ -2,7 +2,7 @@ module D3Magic
 
 # ported from https://github.com/ResidentMario/py_d3
 
-export @d3_str
+export @d3_str, display_d3
 
 const d3id = Ref(0)
 d3version = "3.5.11"
@@ -29,6 +29,10 @@ function d3string(userd3code)
 end
 
 macro d3_str(s)
+    esc(:(display_d3($s)))
+end
+
+function display_d3(s)
     display("text/html", d3string(s))
 end
 
