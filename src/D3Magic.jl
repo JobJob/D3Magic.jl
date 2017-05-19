@@ -5,9 +5,9 @@ module D3Magic
 export @d3_str
 
 const d3id = Ref(0)
-d3version = "3.5.2"
+d3version = "3.5.11"
 
-setD3version(version) = global d3version = version
+setD3version(version::String) = global d3version = version
 
 function d3string(userd3code)
     id = (d3id[] += 1)
