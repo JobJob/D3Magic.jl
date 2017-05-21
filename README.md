@@ -45,13 +45,9 @@ d3"""
 <g></g>
 
 <style>
-element {
-    height: 25px;
-}
 div.bar {
     display: inline-block;
     width: 20px;
-    height: 75px;
     margin-right: 2px;
     background-color: teal;
 }
@@ -61,16 +57,27 @@ div.bar {
 var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
                 11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
+var bar_heights = dataset.map(function bar_height(d) { return 3*d })
 d3.select("g").selectAll("div")
-    .data(dataset)
+    .data(bar_heights)
     .enter()
     .append("div")
     .attr("class", "bar")
-    .style("height", function(d) {
-        var barHeight = d * 5;
-        return barHeight + "px";
-    });
+    .style("height", function(bar_height) {
+        return bar_height + "px";
+    })
+    .style("margin-top", function(bar_height){
+        return (100-bar_height)+"px"
+    }) // surprisingly, this is needed to align the bottom of the bars
 </script>
 """
 ```
-![](images/example_graph.png)
+<style>
+div.bar {
+    display: inline-block;
+    width: 20px;
+    margin-right: 2px;
+    background-color: teal;
+}
+</style>
+<g style="height:100px"><div class="bar" style="height: 15px; margin-top: 85px;"></div><div class="bar" style="height: 30px; margin-top: 70px;"></div><div class="bar" style="height: 39px; margin-top: 61px;"></div><div class="bar" style="height: 57px; margin-top: 43px;"></div><div class="bar" style="height: 63px; margin-top: 37px;"></div><div class="bar" style="height: 75px; margin-top: 25px;"></div><div class="bar" style="height: 66px; margin-top: 34px;"></div><div class="bar" style="height: 54px; margin-top: 46px;"></div><div class="bar" style="height: 45px; margin-top: 55px;"></div><div class="bar" style="height: 39px; margin-top: 61px;"></div><div class="bar" style="height: 33px; margin-top: 67px;"></div><div class="bar" style="height: 36px; margin-top: 64px;"></div><div class="bar" style="height: 45px; margin-top: 55px;"></div><div class="bar" style="height: 60px; margin-top: 40px;"></div><div class="bar" style="height: 54px; margin-top: 46px;"></div><div class="bar" style="height: 51px; margin-top: 49px;"></div><div class="bar" style="height: 48px; margin-top: 52px;"></div><div class="bar" style="height: 54px; margin-top: 46px;"></div><div class="bar" style="height: 69px; margin-top: 31px;"></div><div class="bar" style="height: 75px; margin-top: 25px;"></div></g>
