@@ -73,12 +73,4 @@ d3.select("g").selectAll("div")
 """
 ```
 
-<style>
-div.bar {
-    display: inline-block;
-    width: 20px;
-    margin-right: 2px;
-    background-color: teal;
-}
-</style>
-<g style="height:100px"><div class="bar" style="height: 15px; margin-top: 85px;"></div><div class="bar" style="height: 30px; margin-top: 70px;"></div><div class="bar" style="height: 39px; margin-top: 61px;"></div><div class="bar" style="height: 57px; margin-top: 43px;"></div><div class="bar" style="height: 63px; margin-top: 37px;"></div><div class="bar" style="height: 75px; margin-top: 25px;"></div><div class="bar" style="height: 66px; margin-top: 34px;"></div><div class="bar" style="height: 54px; margin-top: 46px;"></div><div class="bar" style="height: 45px; margin-top: 55px;"></div><div class="bar" style="height: 39px; margin-top: 61px;"></div><div class="bar" style="height: 33px; margin-top: 67px;"></div><div class="bar" style="height: 36px; margin-top: 64px;"></div><div class="bar" style="height: 45px; margin-top: 55px;"></div><div class="bar" style="height: 60px; margin-top: 40px;"></div><div class="bar" style="height: 54px; margin-top: 46px;"></div><div class="bar" style="height: 51px; margin-top: 49px;"></div><div class="bar" style="height: 48px; margin-top: 52px;"></div><div class="bar" style="height: 54px; margin-top: 46px;"></div><div class="bar" style="height: 69px; margin-top: 31px;"></div><div class="bar" style="height: 75px; margin-top: 25px;"></div></g>
+![barplot example](images/barplot_example.png)
