@@ -31,8 +31,8 @@ require(["notebook/js/codecell"], function(codecell) {
 
 ### D3 version
 
-This uses D3 version 3.5.11 by default. You can use a different version by calling, e.g.,
-`D3Magic.setD3version("3.1.1")`
+This uses D3 version 4.9.1 by default. You can use a different version by calling, e.g.,
+`D3Magic.setD3version("3.5.11")`
 
 ### Limitations
 
@@ -72,6 +72,7 @@ d3.select("g").selectAll("div")
 </script>
 """
 ```
+
 <style>
 div.bar {
     display: inline-block;
