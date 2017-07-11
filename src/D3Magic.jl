@@ -28,7 +28,8 @@ function d3string(userd3code)
     """
 end
 
-macro d3_str(s)
+macro d3_str(sraw)
+    s = parse(string("\"\"\"", sraw, "\"\"\""))
     esc(:(display_d3($s)))
 end
 
