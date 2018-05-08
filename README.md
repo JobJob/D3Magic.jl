@@ -40,6 +40,19 @@ This uses D3 version 4.9.1 by default. You can use a different version by callin
 
 Most of the quirks [mentioned here](https://github.com/ResidentMario/py_d3#porting) and [here](https://github.com/ResidentMario/py_d3#technicals), and probably a few more to boot, also apply to this package.
 
+### How it works
+
+D3Magic does these simple steps when you execute `d3"""..."""`:
+
+1. creates a unique id, e.g. it might set `id = 123`
+1. replaces any instances of `d3.select` or `d3.selectAll` to `d3.select("#d3-cell-$id").select` and `d3.select("#d3-cell-$id").selectAll` respectively (using find and replace :O)
+1. displays as html: `<g id="d3-cell-$id">...</g>`
+
+### Global `d3._select` and `d3_selectAll`
+
+If you want to actually select elements outside the `<g id="d3-cell-$id">...</g>` created by D3Magic, use
+`d3._select` and `d3_selectAll` instead. This would be useful e.g. for appending something to the document body - like so `d3._select("body").append(...)`
+
 ### Usage with Interact/InteractNext etc
 
 Some things to note about this example:

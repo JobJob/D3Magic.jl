@@ -25,6 +25,8 @@ function d3string(userd3code, id)
             d3.selectAll$id = function(selection) {
                 return d3.select("#d3-cell-$id").selectAll(selection);
             }
+            d3._select = d3.select
+            d3._selectAll = d3.selectAll
         </script>
         $userd3code
     </g>
