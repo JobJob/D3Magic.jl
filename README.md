@@ -116,3 +116,5 @@ end;
 ```
 
 ![barplot example](images/barplot_example.png)
+
+Sliders not shown, but they should appear below the graph. Moving them should update it.
