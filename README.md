@@ -64,7 +64,8 @@ Some things to note about this example:
 var dataset = $(jl_dataset[1:n])
 ```
 
-Show a graph:
+#### Example: display a graph that you can modify by moving the sliders
+
 ```julia
 display_d3("""
     <g></g>
