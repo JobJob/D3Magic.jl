@@ -1,4 +1,9 @@
-## D3Magic
+## D3Magic is Broken
+
+Sorry, this package is broken atm. It hasn't been updated in a while, and probably won't be (by me) for a while unfortunately - sorry for any inconvenience. PRs with fixes welcome though.
+
+
+### About
 
 Allows you to run D3 code in IJulia/Jupyter notebooks. Largely a port of https://github.com/ResidentMario/py_d3
 
