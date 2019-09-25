@@ -2,6 +2,9 @@
 
 Sorry, this package is broken atm. It hasn't been updated in a while, and probably won't be (by me) for a while unfortunately - sorry for any inconvenience. PRs with fixes welcome though.
 
+The rest of this README is thus mostly lies, do not believe what it says!
+
+---
 
 ### About
 
